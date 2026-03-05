@@ -1,9 +1,10 @@
 import './App.css'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useAuthStore } from './stores/authStore'
 import { useProfileStore } from './stores/profileStore'
 import { useWorkspaceStore } from './stores/workspaceStore'
+import DemoNav from './components/DemoNav'
 
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
@@ -61,6 +62,7 @@ const App = () => {
 
   return (
     <div>
+      <DemoNav />
       <Routes>
         {/* Public */}
         <Route path='/' element={<HomePage />} />
